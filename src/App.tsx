@@ -2,23 +2,23 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { AutoCompleteComponent } from './components/auto-complete/auto-complete';
+
+
 function App() {
+  const myStyle = {
+    backgroundImage: `url(${window.location.origin + "/assets/images/bg.png"})`,
+    height: '99.9vh',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'repeat',
+    padding: '20px'
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div style={myStyle} >
+      <div className="col-md-6">
+         <AutoCompleteComponent></AutoCompleteComponent>
+      </div>
     </div>
   );
 }

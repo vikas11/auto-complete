@@ -1,0 +1,72 @@
+.search-container {
+    width: 400px;
+    position: relative;
+
+    & input {
+        border: 0 none;
+    }
+
+    input,
+    .suggestions {
+        width: 100%;
+    }
+
+    input {
+        background: white;
+        padding: 0 10px;
+        width: 60%;
+    }
+
+    .suggestions {
+        position: absolute;
+    }
+    .ul-auto {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+        max-height: 200px;
+        overflow-y: auto;
+        text-align: left;
+        width: 60%;
+    }
+
+    .has-suggestions {
+        display: block;
+        text-align: left;
+    }
+
+    .ul-auto .auto-li {
+        padding: 5px;
+        cursor: pointer;
+        background: white;
+        text-align: left;
+    }
+
+    .ul-auto .auto-li:hover {
+        background-color: #b8afbe;
+    }
+
+    input {
+        border-bottom: 2px solid orange;
+    }
+
+    li {
+        display: block;
+        align-items: left;
+        justify-content: center;
+        list-style: none;
+        margin-left: 0;
+    }
+
+    .error {
+        color: red;
+        font-weight: 600;
+    }
+
+    .selected-value {
+        color: white;
+        font-weight: 600;
+    }
+}
